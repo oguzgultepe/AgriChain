@@ -1,0 +1,4 @@
+requests
+faker
+bigchaindb_driver
+pprint

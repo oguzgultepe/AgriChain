@@ -1,0 +1,48 @@
+{
+  "inputs": [
+    {
+      "owners_before": [
+        "Dk1z5AgAdN26bSatC5usxYcppbnEEsVe5zPgvmuqoPta"
+      ],
+      "fulfills": null,
+      "fulfillment": "pGSAIL1RVJyti0EgGhCOHp4JH185hDuzptVCmGg5kD1Pi033gUBeNpymGGYcYj8sIGBltTq2PSsrhnZeCaVZHcvGrm7dr9Ml5el9UL-8zvQiQlzSRVZVvgv0vD6-emu8wO3hBPsP"
+    }
+  ],
+  "outputs": [
+    {
+      "public_keys": [
+        "Dk1z5AgAdN26bSatC5usxYcppbnEEsVe5zPgvmuqoPta"
+      ],
+      "condition": {
+        "details": {
+          "type": "ed25519-sha-256",
+          "public_key": "Dk1z5AgAdN26bSatC5usxYcppbnEEsVe5zPgvmuqoPta"
+        },
+        "uri": "ni:///sha-256;pmtDS3Muda20dO9HJ17dt98bOLL0LdAdnIFgTYgK-LA?fpt=ed25519-sha-256&cost=131072"
+      },
+      "amount": "1"
+    }
+  ],
+  "operation": "CREATE",
+  "metadata": {
+    "region": "EU-central"
+  },
+  "asset": {
+    "data": {
+      "asset": {
+        "producer": {
+          "name": "BASF SE",
+          "location": "67056 Ludwigshafen Germany"
+        },
+        "materials": [
+          "e434d8aa-092d-1acf-3d8c-ab3c2d83cdf6",
+          "80846183-5da7-f6a9-2a02-82abec5fa6ce"
+        ],
+        "batch_id": "70524f41-21c9-ea13-ecde-06d262a46d0c",
+        "product_id": "ba144497-7967-7638-b138-62e8689459a4"
+      }
+    }
+  },
+  "version": "1.0",
+  "id": "cbdb8812fc0b4640efd611fd38808c07215a0eeeafe36325ffdc14b75ada5220"
+}
