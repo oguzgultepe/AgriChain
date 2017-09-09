@@ -16,7 +16,7 @@ def generateForm(productType):
         elif data.fieldType == 'date':
             fields[data.identifier] = forms.DateField(widget=forms.SelectDateWidget)
         elif data.fieldType == 'datetime':
-            fields[data.identifier] = forms.DateTimeField(widget=forms.SplitDateTimeWidget)
+            fields[data.identifier] = forms.DateTimeField(widget=forms.DateTimeInput)
         elif data.fieldType == 'Product':
             choices =[]
             for product in Product.objects.filter(productType=data.productType):

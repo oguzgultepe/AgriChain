@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse
 
 from . import models
 from . import forms
+from .blockchain.bigchain_connector import BlockChain
 # Create your views here.
 ##TODO create views for product instance creation
 
@@ -15,8 +16,15 @@ def index(request):
 
 def submit(request,pk):
     if request.method == 'POST':
-        data = request.Post.dict()
-        return HttpResponseRedirect(reverse('product:submit'))
+        data = request.POST.dict()
+        entry = models.BatchEntry()
+        entry.batch = data['Batch ID']
+        entry.product_id = pk
+        db = BlockChain()
+        handle = db.write({'data':data})
+        entry.key = handle.get('id')
+        entry.save()
+        return HttpResponseRedirect(reverse('product:submit',args=[pk]))
     product = get_object_or_404(models.Product,pk=pk)
     productType = models.ProductType.objects.get(pk=product.productType.pk)
     form = forms.generateForm(productType)

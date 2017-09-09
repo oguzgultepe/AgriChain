@@ -43,3 +43,8 @@ class RequiredDataTuple(models.Model):
     productType = models.ForeignKey(ProductType, null=True, blank=True)
     clientType= models.ForeignKey(ClientType, null=True, blank=True)
 
+class BatchEntry(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.PROTECT, editable=False)
+    batch = models.CharField(max_length=100, editable=False)
+    key = models.CharField(max_length=300, editable=False)
+

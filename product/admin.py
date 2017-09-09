@@ -15,12 +15,15 @@ class DataTupleInline(admin.StackedInline):
 class ProductTypeAdmin(admin.ModelAdmin):
     inlines= [DataTupleInline]
 
+class BatchEntryAdmin(admin.ModelAdmin):
+    readonly_fields = ('product','batch','key')
 
 admin.site.register(models.Industry)
 admin.site.register(models.Client)
 admin.site.register(models.ClientType)
 admin.site.register(models.ProductType,ProductTypeAdmin)
 admin.site.register(models.Product)
+admin.site.register(models.BatchEntry, BatchEntryAdmin)
 
 
 
