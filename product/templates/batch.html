@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{product.title}}{% endblock %}
+{% block main %}
+<ul>
+	{% for k in batch%}
+	<li>{{k}}</li>
+	{% endfor %}
+</ul>
+{% endblock %}
+{% block side %}
+	<img src="{% static 'product/images/qrcode.png' %}" alt="QR Code">
+{% endblock %}
+

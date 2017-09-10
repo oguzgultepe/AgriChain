@@ -19,4 +19,5 @@ key2 = tx2.get('id')
   
 time.sleep(2)
 tx3 = db.get_tx(key=key2)
+pprint(tx3)
 assert (tx2 == tx3)
